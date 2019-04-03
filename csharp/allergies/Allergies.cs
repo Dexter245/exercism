@@ -22,6 +22,7 @@ public class Allergies
     {
         Allergies a1 = new Allergies(1);
         a1.IsAllergicTo(Allergen.Eggs);
+        Console.WriteLine("list: " + a1.List());
         Console.ReadLine();
     }
 
@@ -43,11 +44,14 @@ public class Allergies
     public Allergen[] List()
     {
         Allergen[] list = new Allergen[8];
-        Enum.Parse(mask);
-        for(int i = 0; i < 8; i++)
+        //Enum.Parse(mask);
+        //foreach(Enum value in Enum.GetValues(Allergen.Cats.GetType()))
+        foreach(Enum value in Enum.GetValues(Allergen.Cats.GetType()))
         {
-            //if (((int)Math.Pow(2, i) & mask) > 0)
+            Console.WriteLine("value: " + value);
         }
+        
+        //if (((int)Math.Pow(2, i) & mask) > 0)
 
         return list;
     }
